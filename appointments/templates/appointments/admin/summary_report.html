@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Staff Adviser  Services </h1>
+
+<hr>
+
+<h2>System Summary Report as of {% now "jS F Y H:i" %}</h2>
+
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="10">
+    <thead>
+    <tr>
+        <th>Admin: </th>
+        <th>Staff: </th>
+        <th>Student: </th>
+        <th>Appointments: </th>
+        <th>Admin Details: </th>
+        <th>Appointments Total: </th>
+        <th>Pending Admins: </th>
+        <th>Pending Students: </th>
+        <th>Pending Staffs: </th>
+        <th>Pending Appointments: </th>
+    </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>{{ admin }}</td>
+            <td>{{ staff }}</td>
+            <td>{{ students }}</td>
+            <td>{{ appointments }}</td>
+            <td>{{ admin_details }}</td>
+            <td>{{ appointment_total }}</td>
+            <td>{{ pending_admin_total }}</td>
+            <td>{{ pending_student_total }}</td>
+            <td>{{ pending_staff_total }}</td>
+            <td>{{ pending_appointment_total }}</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+
+        
+    
+     
