@@ -105,7 +105,7 @@ class AdminAppointmentForm(forms.ModelForm):  # book an appointment by admin
     student = forms.TypedChoiceField(label='')
     student.widget.attrs.update({'class': 'app-form-control'})
     app_date = forms.DateField(label='', widget=SelectDateWidget(
-        years=range(2022, 2024)))  # appointment date
+        years=range(2023, 2030)))  # appointment date
     app_date.widget.attrs.update({'class': 'app-form-control-date'})
     app_time = forms.TypedChoiceField(label='')  # time of appointment
     app_time.widget.attrs.update({'class': 'app-form-control'})
@@ -218,7 +218,7 @@ class StudentAppointmentForm(forms.ModelForm):
     staff.widget.attrs.update({'class': 'app-form-control'})
     # staff_id=forms.CharField(widget=forms.Select(choices=c))
     app_date = forms.DateField(label='', widget=SelectDateWidget(
-        years=range(2022, 2024)))  # date of appointment
+        years=range(2023, 2030)))  # date of appointment
     app_date.widget.attrs.update({'class': 'app-form-control-date'})
     app_time = forms.TypedChoiceField(label='')  # time of appointment
     app_time.widget.attrs.update({'class': 'app-form-control'})

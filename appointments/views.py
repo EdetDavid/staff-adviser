@@ -18,6 +18,7 @@ from django.http import HttpResponse, JsonResponse
 from django.template.loader import get_template
 from django.urls import reverse
 from django.utils import timezone
+from django.views import generic
 
 from django.shortcuts import render, redirect
 from xhtml2pdf import pisa
@@ -43,6 +44,7 @@ from appointments.models import (
     StaffServiceField,
     ApprovedStudentAppointment,
     AppointmentRating,
+    Post
 )
 
 
@@ -802,7 +804,7 @@ def all_sta_adm_view(request):
                     e.country,
                     e.service_field,
                     e.status,
-                    
+
                 ]
             )
 
@@ -925,7 +927,7 @@ def all_adm_adm_view(request):
         return redirect("login_adm.html")
 
 
-# S
+# Student Registration View
 def register_stu_view(request):  # Register student
     if request.method == "POST":
         registration_form = StudentRegistrationForm(
@@ -1015,13 +1017,13 @@ def login_stu_view(request):  # Login student
                         "appointments/student/login_stu.html",
                         {"login_form": login_form},
                     )
-            elif ( user is None): # if user does not exits
-                  messages.add_message(
-                        request,
-                        messages.ERROR,
-                        "User does not exits or Invalid Details "
-                    )
-                      
+            elif (user is None):  # if user does not exits
+                messages.add_message(
+                    request,
+                    messages.ERROR,
+                    "User does not exits or Invalid Details "
+                )
+
         return render(
             request, "appointments/student/login_stu.html", {
                 "login_form": login_form}
@@ -1077,7 +1079,7 @@ def profile_stu_view(request):
                         "student_update_form": student_update_form,
                         "stu": stu,
                         "age": age,
-                        
+
                     }
                     return render(
                         request, "appointments/student/profile_stu.html", context
@@ -2318,6 +2320,21 @@ def check_sta_availability(staff, dt, tm):
     return True
 
 
+
+
+# Blog View
+
+class PostList(generic.ListView):
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
+    template_name = 'index.html'
+
+
+class PostDetail(generic.DetailView):
+    model = Post
+    template_name = 'post_detail.html'
+
+
+# ChatBot View
 openai_api_key = "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"
 openai.api_key = openai_api_key
 
