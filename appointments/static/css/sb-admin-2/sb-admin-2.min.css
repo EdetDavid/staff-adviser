@@ -4207,6 +4207,7 @@ input[type="submit"].btn-block {
 .card {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
@@ -4214,6 +4215,7 @@ input[type="submit"].btn-block {
   background-clip: border-box;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
+  margin: 10px;
 }
 .card > hr {
   margin-right: 0;

@@ -2351,6 +2351,7 @@ def ask_openai(message):
 
     print(response)
     answer = response[0].text.strip()
+    return (answer)
 
 
 @login_required(login_url="chatbot-login")
