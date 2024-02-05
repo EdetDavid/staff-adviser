@@ -113,16 +113,16 @@ DATABASES = {
 """
 
 # Vercel Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'verceldb',
-#         'USER':   'default',
-#         'PASSWORD': 'FZDXdwh9C3ci',
-#         'HOST': 'ep-steep-tooth-47162027.eu-central-1.postgres.vercel-storage.com',
-#         'PORT': '5432'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'verceldb',
+        'USER':   'default',
+        'PASSWORD': 'RznK2kZ4xbuH',
+        'HOST': 'ep-steep-tooth-47162027.eu-central-1.postgres.vercel-storage.com',
+        'PORT': '5432'
+    }
+}
 
 
 # Password validation
