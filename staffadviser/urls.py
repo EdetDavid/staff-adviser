@@ -11,7 +11,7 @@ from django.conf.urls.static import static
 
 admin.site.site_header = "Staff Adviser Superadmin"
 admin.site.site_title = "Staff Adviser Superadmin Portal"
-admin.site.index_title = "Welcome to Staff Sdviser Superadmin Portal"
+admin.site.index_title = "Welcome to Staff Adviser Superadmin Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
