@@ -89,7 +89,7 @@ WSGI_APPLICATION = "staffadviser.wsgi.application"
 
 # sqlite database
 
-"""
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -99,7 +99,7 @@ DATABASES = {
 
 
 # local postgres database
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -110,7 +110,7 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-"""
+
 
 # Vercel Database
 DATABASES = {
@@ -123,7 +123,7 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
