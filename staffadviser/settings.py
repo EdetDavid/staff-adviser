@@ -118,8 +118,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'verceldb',
         'USER':   'default',
-        'PASSWORD': 'RznK2kZ4xbuH',
-        'HOST': 'ep-steep-tooth-47162027.eu-central-1.postgres.vercel-storage.com',
+        'PASSWORD': 'QeqtUxsH0Cf6',
+        'HOST': 'ep-hidden-scene-a4fetg38.us-east-1.aws.neon.tech',
         'PORT': '5432'
     }
 }
